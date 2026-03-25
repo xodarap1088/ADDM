@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: #faf8ff;
+  --color-on-surface: #113069;
+  --color-on-surface-variant: #445d99;
+  
+  --color-primary: #3755c3;
+  --color-primary-dim: #2848b7;
+  --color-primary-container: #dde1ff;
+  --color-on-primary-container: #2747b6;
+  
+  --color-secondary: #526074;
+  --color-secondary-dim: #465468;
+  --color-secondary-container: #d5e3fc;
+  --color-on-secondary-container: #455367;
+  
+  --color-tertiary: #006d4b;
+  --color-tertiary-dim: #005f41;
+  --color-tertiary-container: #7ff3be;
+  --color-on-tertiary-container: #005a3d;
+  
+  --color-error: #9f403d;
+  --color-error-container: #fe8983;
+  --color-on-error-container: #752121;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #d9e2ff;
+  
+  --color-outline-variant: #98b1f2;
+  --color-inverse-surface: #060e20;
+  --color-inverse-on-surface: #959cb5;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-container-highest);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline-variant);
+}
